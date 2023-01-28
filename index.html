@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Quer Casar Comigo?</title>
+  <style>
+    /* Estilos para a tela */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    /* Estilos para a pergunta */
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    /* Estilos para os botões */
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 0 10px;
+    }
+
+    /* Estilos para o botão não */
+    #no-button {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Quer Casar Comigo?</h1>
+    <div>
+      <button id="yes-button">Sim</button>
+      <button id="no-button"onmouseover="mouseOverNo()">Não</button>
+    </div>
+  </div>
+  <script>
+      function mouseOverNo() {
+        var btnNo = document.getElementById("no-button");
+        btnNo.style.position = "absolute";
+        btnNo.style.top = Math.random() * 1000 + "px";
+        btnNo.style.left = Math.random() * 1000 + "px";
+      }
+  </script>
+</body>
+</html>
